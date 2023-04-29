@@ -1,0 +1,92 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Email Radar - B2B Email Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='logo1.png') }}">
+    <style>
+      body {
+        background-color: #515151;
+        color: #e4e1e1;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+      #header {
+        background-color: #353535;
+        padding: 20px;
+      }
+      #header h1 {
+        font-size: 18px;
+        margin: 0;
+      }
+      #header p {
+        margin: 10px 0 0;
+      }
+      #content {
+        background-color: #515151;
+        margin: 20px;
+        color: #d3d3d3;
+      }
+      #content h2 {
+        margin-top: 0;
+      }
+      #footer {
+        background-color: #515151;
+        color: #dcdcdc;
+        padding: 20px;
+        text-align: center;
+      }
+      input[type="text"], input[type="submit"] {
+        margin: 10px;
+        padding: 10px;
+      }
+      /* Ajout du CSS pour l'alignement sur la largeur */
+      .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .flex-item-1 {
+        width: 30%;
+        margin-bottom: 20px;
+      }
+      .item-text {
+        margin-left: 20px;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <title>Résultas de la recherche</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>
+        <a href="/">
+          <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        </a>        
+      </h1>
+      <h1 style="text-align: center;"> B2B Email Finder</h1>
+    </div>
+    <div id="content">
+      <section style="display: flex; align-items: center; justify-content: center; margin-top: 40px">
+        <img src="{{ url_for('static', filename='search.png') }}" alt="titre1">
+        <h1>Scannez de millions de sites internet en quelques secondes <br> 
+          Trouvez les emails vérifiés de vos futurs clients</h1>
+      </section>
+    <h1>Voici les adresses mail correspondant à ce domaine :</h1>
+    <ul>
+      {% for email_resultat in email_resultat_couples %}
+      <li>{{ email_resultat }} <br> </li>
+      {% endfor %}
+    </ul>
+    <h2>{{ nb_sites * 100 }} résultats de recherche analysés</h2>
+  </div>
+  
+  <div id="footer">
+    <p>Copyright © 2023 Email Radar</p>
+  </div>
+  </body>
+</html>
