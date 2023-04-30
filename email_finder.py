@@ -14,7 +14,7 @@ from flask import request, flash, redirect, render_template, url_for
 import sys, re, dns.resolver, random, string
 
 
-email_finder = Flask(__name__, static_folder='templates', template_folder='templates')
+email_finder = Flask(__name__, static_folder='templates', template_folder='./')
 email_finder.secret_key = ''.join(random.choice(string.ascii_letters + string.digits)for i in range(24))
 
 
