@@ -3,6 +3,7 @@
 #header {
     background-color: #292929;
     padding: 20px;
+    height: 38px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -10,7 +11,6 @@
   }
   #header h1 {
     font-size: 18px;
-    margin: 50px;
     color: #dcdcdc;
     display: flex;
     flex-direction: row;
@@ -27,6 +27,13 @@
     color: #dcdcdc;
     text-align: center;
     font-size: 12px;
+  }
+
+/***********************************************************************************
+/* Titre */
+  #titre {
+    display: flex;
+    align-items: center
   }
 
 /***********************************************************************************
@@ -93,30 +100,27 @@ body {
  .row-container {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    flex-wrap: wrap;
     padding: 20px;
-    
+    padding-top: 75px;
+
   }
   
   /* Container pour chaque item */
   .flex-item-1 {
-    text-align: center; 
-    width: 30%; 
-    margin: 10px;
-    margin-top: 90px;
-    margin-bottom: 20px;
-    margin-left: 50px; 
-    margin-right: 20px; 
-    border: 5px solid #353535; 
-    height: 300px;
+    width: 30%;
+    border: 5px solid #353535;
+    height: 400px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
-  .item-text {
-    margin-left: 20px;
+  /* item pour le titre */
+  .flex-container {
+    display: flex;
+    justify-content: center;
   }
 
 /***********************************************************************************
