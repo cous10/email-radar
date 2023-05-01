@@ -1,3 +1,4 @@
+/***********************************************************************************
 /* Header */
 #header {
     background-color: #292929;
@@ -14,6 +15,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-align: center;
   }
   #header img {
     width: 150px;
@@ -27,20 +29,39 @@
     font-size: 12px;
   }
 
-  /* Content */
+/***********************************************************************************
+/* Body */
+body {
+  background-color: #515151;
+  color: #e4e1e1;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Content */
   #content {
     margin: 20px;
+    margin-top: 40px;
+    background-color: #515151;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: #d3d3d3;
+    justify-content: center
   }
   #content h2 {
     margin-top: 0;
     color: #dcdcdc;
   }
+
+/***********************************************************************************
+  /* Formulaire */
   form {
-    margin-top: 20px;
+    margin-top: 40px
   }
 
   input[type="text"], input[type="submit"] {
@@ -53,15 +74,21 @@
     font-size: 16px;
   }
   input[type="submit"] {
+    margin: 10px;
     background-color: #292929;
     color: #008000;
     font-size: 18px;
     cursor: pointer;
+    width: 130px;
+    border-radius: 7px; 
+    box-shadow: 2px 2px 4px #008000;
+    font-weight: bold;
   }
   input[type="submit"]:hover {
     background-color: #1c1c1c;
   }
-  
+
+/***********************************************************************************
 /* Container principal */
  .row-container {
     display: flex;
@@ -73,18 +100,34 @@
   
   /* Container pour chaque item */
   .flex-item-1 {
+    text-align: center; 
+    width: 30%; 
+    margin: 10px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    margin-left: 50px; 
+    margin-right: 20px; 
+    border: 5px solid #353535; 
+    height: 300px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 10px;
   }
+
+  .item-text {
+    margin-left: 20px;
+  }
+
+/***********************************************************************************
+/* Texte */
 
   /* Style pour le texte h3 */
   h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: justify
   }
   
   /* Style pour la description */
@@ -95,7 +138,7 @@
     margin-right: 10px;
     margin-left: 10px;
   }
-  
+  /* Style pour liste resultats */
   ul {
     background-color: #292929;
     border: 1px solid #008000;
@@ -108,13 +151,17 @@
     font-weight: bold;
   }
 
+/***********************************************************************************
+/* Footer */
 
-  /* Footer */
 #footer {
+  margin-top: 80px;
   background-color: #292929;
+  color: #dcdcdc;
   padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }

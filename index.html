@@ -4,63 +4,8 @@
     <title>Email Radar - B2B Email Finder</title>
     <link rel="stylesheet" href="./templates/style.css">
     <link rel="shortcut icon" type="image/png" href="./templates/logo1.png">
-    <style>
-      body {
-        background-color: #515151;
-        color: #e4e1e1;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
-        margin: 0;
-        padding: 0;
-      }
-      #header {
-        background-color: #353535;
-        padding: 20px;
-      }
-      #header h1 {
-        font-size: 18px;
-        margin: 0;
-      }
-      #header p {
-        margin: 10px 0 0;
-      }
-      #content {
-        background-color: #515151;
-        margin: 20px;
-        color: #d3d3d3;
-      }
-      #content h2 {
-        margin-top: 0;
-      }
-      #footer {
-        background-color: #353535;
-        padding: 20px;
-        display: flex;
-        color: #e4e1e1;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 80px;
-      }
-      input[type="text"], input[type="submit"] {
-        margin: 10px;
-        padding: 10px;
-      }
-      /* Ajout du CSS pour l'alignement sur la largeur */
-      .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      .flex-item-1 {
-        width: 30%;
-        margin-bottom: 20px;
-      }
-      .item-text {
-        margin-left: 20px;
-      }
-    </style>
   </head>
+
   <body>
     <div id="header">
       <h1>
@@ -68,25 +13,25 @@
           <img src="./templates/logo.png" alt="Logo">
         </a>        
       </h1>
-      <h1 style="text-align: center;"> B2B Email Finder</h1>
+      <h1> B2B Email Finder</h1>
     </div>
     <div id="content">
-      <section style="display: flex; align-items: center; justify-content: center; margin-top: 40px">
+      <section>
         <img src="./templates/search.png" alt="titre1">
         <h1>Scannez de millions de sites internet en quelques secondes <br> 
           Trouvez les emails vérifiés de vos futurs clients</h1>
       </section>
 
-      <form action="{{ url_for('home') }}" method="POST" style="margin-top: 40px">
+      <form action="{{ url_for('home') }}" method="POST">
         <input type="text" name="domain_search" placeholder="Saisir le nom de domaine de l'entreprise (ex: google.com)" 
         style="width: 500px; margin-top: 30px">
         <br><br>
-        <input type="submit" value="Valider" style="width: 130px; border-radius: 7px; box-shadow: 2px 2px 4px #008000; font-weight: bold;">
+        <input type="submit" value="Valider">
       </form>
 
-      <div id=row-container style="display: flex; justify-content: space-between; align-items: center; width: 90%; margin-top: 90px;">
-        <div style="text-align: center; width: 30%; margin-left: 50px; margin-right: 20px; border: 5px solid #353535; height: 300px;">
-          <h3 style="display: flex; align-items: center; text-align: justify">
+      <div id=row-container>
+        <div id=.flex-item-1>
+          <h3>
             <img src="./templates/parsing.png" alt="parsing file" style="width: 20%;">
             Des millions de pages <br>
             internet scannées
@@ -95,8 +40,8 @@
             Gagnez du temps et de l'énergie dans votre recherche de prospects.</p>
         </div>
       
-        <div style="text-align: center; width: 30%; margin-left: 20px; margin-right: 20px; border: 5px solid #353535;height: 300px;">
-          <h3 style="display: flex; align-items: center; text-align: justify">
+        <div id=.flex-item-1>
+          <h3>
             <img src="./templates/verified.png" alt="verified badge" style="width: 20%;">
             Des adresses email vérifiées
           </h3>
@@ -104,8 +49,8 @@
             Evitez d'être classé en spam à cause du volume de mail erronés dans vos campagnes commerciales.</p>
         </div>
       
-        <div style="text-align: center; width: 30%; margin-left: 20px; margin-right: 50px; border: 5px solid #353535; height: 300px;">
-          <h3 style="display: flex; align-items: center; text-align: justify">
+        <div id=.flex-item-1>
+          <h3>
             <img src="./templates/prospect.png" alt="prospect icon" style="width: 20%;">
             Des prospects qualifiés <br>
             pour votre entreprise
