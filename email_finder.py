@@ -208,8 +208,8 @@ def result():
     
         # Définir le nouvel index de départ pour la recherche suivante
         start_index = index + 1
-        print(email_trouves,'#############################')
-        print(email_trouve_bdd,'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+        #print(email_trouves,'#############################')
+        #print(email_trouve_bdd,'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
         email_resultat_couples = list(set(email_trouves + email_trouve_bdd))
     return render_template('result.html', email_resultat_couples=email_resultat_couples, nb_sites = len(html_codes))
 
