@@ -110,7 +110,7 @@ def result():
     options.add_argument('--headless')
 
     # Ouvrir le navigateur Google Chrome
-    service = Service(executable_path='/Users/rylesbengougam/Desktop/email/chromedriver')
+    service = Service(executable_path='./chromedriver')
     driver = webdriver.Chrome(service=service, options=options)
 
 
@@ -211,7 +211,7 @@ def result():
         #print(email_trouves,'#############################')
         #print(email_trouve_bdd,'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
         email_resultat_couples = list(set(email_trouves + email_trouve_bdd))
-    return render_template('result.html', email_resultat_couples=email_resultat_couples, nb_sites = len(html_codes))
+    return render_template('./templates/result.html', email_resultat_couples=email_resultat_couples, nb_sites = len(html_codes))
 
 
 ###################################################################################################    
